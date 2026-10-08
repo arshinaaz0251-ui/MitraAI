@@ -1,0 +1,120 @@
+[
+  {
+    "scheme_id": "ap_post_matric_scholarship",
+    "name": {
+      "en": "Post-Matric Scholarship (Vidyarthi Deevena)",
+      "te": "పోస్ట్-మెట్రిక్ స్కాలర్‌షిప్ (విద్యార్థి దీవెన)",
+      "hi": "पोस्ट-मैट्रिक छात्रवृत्ति (विद्यार्थी दीवेना)"
+    },
+    "description": {
+      "en": "Scholarship for SC/ST/BC/EBC students pursuing post-matric education in Andhra Pradesh. Covers tuition fees, hostel charges, and examination fees.",
+      "te": "ఆంధ్రప్రదేశ్‌లో పోస్ట్-మెట్రిక్ విద్యను అభ్యసిస్తున్న SC/ST/BC/EBC విద్యార్థులకు స్కాలర్‌షిప్. ట్యూషన్ ఫీజులు, హాస్టల్ ఛార్జీలు మరియు పరీక్ష ఫీజులను కవర్ చేస్తుంది.",
+      "hi": "आंध्र प्रदेश में पोस्ट-मैट्रिक शिक्षा प्राप्त कर रहे SC/ST/BC/EBC छात्रों के लिए छात्रवृत्ति। ट्यूशन फीस, हॉस्टल शुल्क और परीक्षा शुल्क को कवर करती है।"
+    },
+    "eligibility_rules": {
+      "max_annual_income": 200000,
+      "eligible_categories": [
+        "SC",
+        "ST",
+        "BC",
+        "EBC"
+      ],
+      "required_documents": [
+        "income_certificate",
+        "caste_certificate"
+      ],
+      "income_certificate_max_age_years": 1,
+      "additional_conditions": {
+        "min_education": "10th pass",
+        "state_domicile": "Andhra Pradesh"
+      }
+    },
+    "benefits": {
+      "en": "Full tuition fee reimbursement, hostel maintenance allowance, and examination fee coverage.",
+      "te": "పూర్తి ట్యూషన్ ఫీజు రీయింబర్స్‌మెంట్, హాస్టల్ నిర్వహణ భత్యం మరియు పరీక్ష ఫీజు కవరేజీ.",
+      "hi": "पूर्ण ट्यूशन शुल्क प्रतिपूर्ति, छात्रावास रखरखाव भत्ता, और परीक्षा शुल्क कवरेज।"
+    },
+    "application_steps": {
+      "en": [
+        "Visit jnanabhumi.ap.gov.in and click 'Student Login'",
+        "Register with your Aadhaar number and mobile number",
+        "Fill in academic details and upload required documents",
+        "Submit the application and note down the reference number"
+      ],
+      "te": [
+        "jnanabhumi.ap.gov.in ని సందర్శించి 'Student Login' పై క్లిక్ చేయండి",
+        "మీ ఆధార్ నంబర్ మరియు మొబైల్ నంబర్‌తో నమోదు చేసుకోండి",
+        "అకడమిక్ వివరాలను నమోదు చేసి అవసరమైన పత్రాలను అప్‌లోడ్ చేయండి",
+        "దరఖాస్తును సమర్పించి రిఫరెన్స్ నంబర్‌ను నోట్ చేసుకోండి"
+      ],
+      "hi": [
+        "jnanabhumi.ap.gov.in पर जाएं और 'Student Login' पर क्लिक करें",
+        "अपने आधार नंबर और मोबाइल नंबर से पंजीकरण करें",
+        "शैक्षणिक विवरण भरें और आवश्यक दस्तावेज अपलोड करें",
+        "आवेदन जमा करें और संदर्भ संख्या नोट कर लें"
+      ]
+    },
+    "official_source_url": "https://jnanabhumi.ap.gov.in",
+    "last_verified_date": "2026-09-15",
+    "state": "Andhra Pradesh",
+    "category": "Education"
+  },
+  {
+    "scheme_id": "pm_kisan_samman_nidhi",
+    "name": {
+      "en": "PM-Kisan Samman Nidhi",
+      "te": "PM-కిసాన్ సమ్మాన్ నిధి",
+      "hi": "PM-किसान सम्मान निधि"
+    },
+    "description": {
+      "en": "Direct income support of ₹6,000 per year to small and marginal farmer families, paid in three equal instalments of ₹2,000 every four months.",
+      "te": "చిన్న మరియు సన్నకారు రైతు కుటుంబాలకు సంవత్సరానికి ₹6,000 ప్రత్యక్ష ఆదాయ మద్దతు, ప్రతి నాలుగు నెలలకు ₹2,000 చొప్పున మూడు సమాన వాయిదాలలో చెల్లించబడుతుంది.",
+      "hi": "छोटे और सीमांत किसान परिवारों को प्रति वर्ष ₹6,000 की प्रत्यक्ष आय सहायता, हर चार महीने में ₹2,000 की तीन समान किश्तों में भुगतान।"
+    },
+    "eligibility_rules": {
+      "max_annual_income": 300000,
+      "eligible_categories": [
+        "All Farmers"
+      ],
+      "required_documents": [
+        "land_passbook",
+        "ration_card",
+        "bank account"
+      ],
+      "income_certificate_max_age_years": 1,
+      "additional_conditions": {
+        "land_ownership": "Must own cultivable land",
+        "exclusions": "Institutional land holders, income tax payers, and government employees excluded"
+      }
+    },
+    "benefits": {
+      "en": "₹6,000 per year in 3 instalments of ₹2,000 each, directly transferred to bank account.",
+      "te": "సంవత్సరానికి ₹6,000 ప్రతి ₹2,000 చొప్పున 3 వాయిదాలలో, నేరుగా బ్యాంక్ ఖాతాకు బదిలీ చేయబడుతుంది.",
+      "hi": "प्रति वर्ष ₹6,000, ₹2,000 की 3 किश्तों में, सीधे बैंक खाते में ट्रांसफर।"
+    },
+    "application_steps": {
+      "en": [
+        "Visit pmkisan.gov.in and click 'New Farmer Registration'",
+        "Enter Aadhaar number and select your state",
+        "Fill in land ownership details and bank account information",
+        "Verify via OTP and submit the application"
+      ],
+      "te": [
+        "pmkisan.gov.in ని సందర్శించి 'New Farmer Registration' పై క్లిక్ చేయండి",
+        "ఆధార్ నంబర్ నమోదు చేసి మీ రాష్ట్రాన్ని ఎంచుకోండి",
+        "భూ యాజమాన్య వివరాలు మరియు బ్యాంక్ ఖాతా సమాచారాన్ని నమోదు చేయండి",
+        "OTP ద్వారా ధృవీకరించి దరఖాస్తును సమర్పించండి"
+      ],
+      "hi": [
+        "pmkisan.gov.in पर जाएं और 'New Farmer Registration' पर क्लिक करें",
+        "आधार नंबर दर्ज करें और अपना राज्य चुनें",
+        "भूमि स्वामित्व विवरण और बैंक खाता जानकारी भरें",
+        "OTP से सत्यापित करें और आवेदन जमा करें"
+      ]
+    },
+    "official_source_url": "https://pmkisan.gov.in",
+    "last_verified_date": "2026-09-20",
+    "state": "Central",
+    "category": "Agriculture"
+  }
+]

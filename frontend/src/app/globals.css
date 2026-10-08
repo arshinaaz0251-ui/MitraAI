@@ -1,0 +1,409 @@
+@import "tailwindcss";
+
+/* ══════════════════════════════════════════════
+   MitraAI — Design System Tokens & Base Styles
+   ══════════════════════════════════════════════ */
+
+@theme {
+  --color-warm-bg: #F7F5F0;
+  --color-surface: #FFFFFF;
+  --color-section-tint: #F0EEE8;
+  --color-primary: #0F4C5C;
+  --color-primary-hover: #0B3A47;
+  --color-primary-tint: #E3F0F2;
+  --color-accent-saffron: #E07A1F;
+  --color-accent-saffron-hover: #C86715;
+  --color-text-primary: #1B2430;
+  --color-text-secondary: #4B5563;
+  --color-border-subtle: #E2DED5;
+
+  --color-status-ready: #15803D;
+  --color-status-ready-bg: #E6F4EA;
+  --color-status-action: #B45309;
+  --color-status-action-bg: #FEF3E2;
+  --color-status-blocked: #B91C1C;
+  --color-status-blocked-bg: #FDECEC;
+  --color-status-review: #475569;
+  --color-status-review-bg: #EEF1F5;
+
+  --radius-card: 20px;
+  --radius-field: 14px;
+  --radius-pill: 9999px;
+}
+
+:root {
+  /* Color Tokens */
+  --bg-page: #F7F5F0;
+  --surface: #FFFFFF;
+  --surface-tint: #F0EEE8;
+  --primary: #0F4C5C;
+  --primary-hover: #0B3A47;
+  --primary-tint: #E3F0F2;
+  --accent: #E07A1F;
+  --accent-hover: #C86715;
+  --text-primary: #1B2430;
+  --text-secondary: #4B5563;
+  --border-subtle: #E2DED5;
+
+  /* Status Colors (always paired with icon + label) */
+  --status-ready: #15803D;
+  --status-ready-bg: #E6F4EA;
+  --status-action: #B45309;
+  --status-action-bg: #FEF3E2;
+  --status-blocked: #B91C1C;
+  --status-blocked-bg: #FDECEC;
+  --status-review: #475569;
+  --status-review-bg: #EEF1F5;
+
+  /* Elevation */
+  --shadow-soft: 0 1px 2px rgba(16, 24, 40, 0.06), 0 8px 24px rgba(16, 24, 40, 0.06);
+
+  /* Typography Scaling */
+  --text-size-adjust: 0px;
+  --font-sans: var(--font-inter, 'Inter'), var(--font-telugu, 'Noto Sans Telugu'), var(--font-devanagari, 'Noto Sans Devanagari'), system-ui, -apple-system, sans-serif;
+}
+
+/* ══════════════════════════════════════════════
+   Base Styles (NO unlayered margin/padding resets!)
+   ══════════════════════════════════════════════ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: inherit;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-size: calc(18px + var(--text-size-adjust));
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Text Size Scaler (A- A A+) */
+html[data-text-size="small"] {
+  --text-size-adjust: -2px;
+}
+html[data-text-size="normal"] {
+  --text-size-adjust: 0px;
+}
+html[data-text-size="large"] {
+  --text-size-adjust: 2px;
+}
+
+/* Regional Language Font & Line-Height adjustments */
+html[lang="te"],
+html[data-language="te"] {
+  font-family: var(--font-telugu, 'Noto Sans Telugu'), var(--font-inter, 'Inter'), system-ui, sans-serif;
+  line-height: 1.65;
+}
+
+html[lang="hi"],
+html[data-language="hi"] {
+  font-family: var(--font-devanagari, 'Noto Sans Devanagari'), var(--font-inter, 'Inter'), system-ui, sans-serif;
+  line-height: 1.65;
+}
+
+/* ══════════════════════════════════════════════
+   Headings & Typography
+   ══════════════════════════════════════════════ */
+
+h1, .text-h1 {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+h2, .text-h2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+}
+
+h3, .text-h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+/* Form labels: Sentence case, 14px, weight 600, no long all-caps */
+label, .form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+}
+
+/* ══════════════════════════════════════════════
+   Focus Visibility
+   ══════════════════════════════════════════════ */
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px var(--primary-tint);
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px var(--primary-tint);
+}
+
+/* ══════════════════════════════════════════════
+   Component Tokens
+   ══════════════════════════════════════════════ */
+
+/* MitraAI Cards */
+.civora-card {
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  padding: 24px;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+@media (min-width: 768px) {
+  .civora-card {
+    padding: 32px;
+  }
+}
+
+/* Primary Button */
+.civora-btn-primary {
+  min-height: 56px;
+  height: auto;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 200ms ease, transform 150ms ease;
+  text-decoration: none;
+}
+
+.civora-btn-primary:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+}
+
+.civora-btn-primary:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.civora-btn-primary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Secondary Button */
+.civora-btn-secondary {
+  min-height: 56px;
+  height: auto;
+  padding: 12px 24px;
+  background-color: #FFFFFF;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 14px;
+  border: 1.5px solid var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 200ms ease, transform 150ms ease;
+  text-decoration: none;
+}
+
+.civora-btn-secondary:hover:not(:disabled) {
+  background-color: var(--primary-tint);
+}
+
+.civora-btn-secondary:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+/* Form Inputs */
+.civora-input {
+  height: 56px;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  font-size: 16px;
+  color: var(--text-primary);
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.civora-input::placeholder {
+  color: #6B7280;
+}
+
+.civora-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-tint);
+}
+
+/* Input with icon */
+.civora-input-with-icon {
+  padding-left: 48px;
+}
+
+/* Saffron Voice Mic Button (min 64px) */
+.civora-mic-btn {
+  width: 68px;
+  height: 68px;
+  min-width: 68px;
+  min-height: 68px;
+  border-radius: 9999px;
+  background-color: var(--accent);
+  color: #FFFFFF;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(224, 122, 31, 0.35);
+  transition: background-color 200ms ease, transform 150ms ease, box-shadow 200ms ease;
+}
+
+.civora-mic-btn:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.04);
+  box-shadow: 0 6px 20px rgba(224, 122, 31, 0.45);
+}
+
+.civora-mic-btn:active {
+  transform: scale(0.97);
+}
+
+.civora-mic-btn.is-listening {
+  background-color: var(--status-ready);
+  box-shadow: 0 0 0 8px rgba(21, 128, 61, 0.2);
+}
+
+/* Subtle fade-up transition */
+@keyframes civoraFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: civoraFadeUp 220ms ease-out both;
+}
+
+/* ══════════════════════════════════════════════
+   Elder Mode Overrides
+   ══════════════════════════════════════════════ */
+
+[data-elder-mode="true"] {
+  --bg-page: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-tint: #F4F4F4;
+  --text-primary: #000000;
+  --text-secondary: #1F2937;
+  --primary: #0A3D4A;
+  --primary-hover: #072C35;
+  --primary-tint: #D6EDF2;
+  --border-subtle: #000000;
+}
+
+[data-elder-mode="true"] body {
+  font-size: 22px;
+  line-height: 1.7;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+[data-elder-mode="true"] .civora-card {
+  border-width: 3px;
+  border-color: #000000;
+  box-shadow: none;
+  padding: 32px;
+}
+
+[data-elder-mode="true"] .civora-btn-primary,
+[data-elder-mode="true"] .civora-btn-secondary {
+  height: 64px;
+  min-height: 64px;
+  font-size: 20px;
+  font-weight: 700;
+  border-width: 3px;
+  padding: 0 28px;
+}
+
+[data-elder-mode="true"] .civora-input {
+  height: 64px;
+  min-height: 64px;
+  font-size: 20px;
+  border-width: 3px;
+  border-color: #000000;
+}
+
+[data-elder-mode="true"] .civora-mic-btn {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  min-height: 80px;
+}
+
+[data-elder-mode="true"] * {
+  animation: none !important;
+  transition-duration: 0.05s !important;
+}
+
+/* ══════════════════════════════════════════════
+   Reduced Motion
+   ══════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
